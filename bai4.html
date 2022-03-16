@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 4</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			function KiemTra()
+			{
+				var tdn = f.txtTenDangNhap.value;
+				var mk = f.txtMK.value;
+				var nlmk = f.txtMKNL.value;
+
+				if(tdn==""|| mk==""|| nlmk=="")
+				{
+					alert('Các ô phải nhập hết');
+					return false;
+				}
+				if(tdn.length<6)
+				{
+					alert(" tên đăng nhập nhỏ hơn 6 ký tự")
+					return false;
+				}
+				if(mk != nlmk)
+				{
+					alert(' nhap lại mk khong khop')
+					return false;
+				}
+
+				return true;
+			}
+		</script>
+		
+	
+		<form name="f">
+			<table>
+				<tr>
+					<td>Tên Đăng Nhập</td>
+					<td><input type="text" name="txtTenDangNhap">(Nhiều hơn 6 ký tự)</td>
+				</tr>
+				<tr>
+					<td>Mật Khẩu</td>
+					<td><input type="password" name="txtMK"></td>
+				</tr>
+				<tr>
+					<td>Nhập Lại Mật Khẩu</td>
+					<td><input type="password" name="txtMKNL"></td>
+				</tr>
+			</table>
+			<button type="submit" onclick="return KiemTra()" >Kiểm tra</button>
+		</form>
+	</body>
+</html>
